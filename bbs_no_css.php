@@ -33,7 +33,7 @@ $dbh = null;
   <title>セブ掲示版</title>
 </head>
 <body>
-    <form method="post" action=""><!--自分自身に飛ばせるのか-->
+    <form method="post" action=""><!--自分自身に送信する-->
       <p><input type="text" name="nickname"  placeholder="nickname"></p><!--placeholder枠内の文字出力-->
 
 
