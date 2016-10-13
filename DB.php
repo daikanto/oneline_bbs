@@ -13,13 +13,23 @@ if(!empty($_POST)){
 	$nickname=$_POST['nickname'];
 	$comment=$_POST['comment'];
 
-}
+
 
 // ２．SQL文を実行する
 //DB登録する
-$sql = 'INSERT INTO `posts`(`id`, `nickname`, `comment`, `created`) VALUES (null,'"$nickname"','"$comment"',now())';//$変数に変更
+$sql = "INSERT INTO `posts`(`id`, `nickname`, `comment`, `created`) VALUES (null,'"$nickname"','"$comment"',now())";//$変数に変更
 $stmt = $dbh->prepare($sql);
 $stmt->execute();
+｝
+
+
+//入力が正しく行われなかった場合
+else{
+	echo 正しく入力が行われていません。
+}
+
+
+
 
 // ３．データベースを切断する
 $dbh = null;
