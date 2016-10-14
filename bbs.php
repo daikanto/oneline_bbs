@@ -1,11 +1,20 @@
 <?php
     // ここにDBに登録する処理を記述する
 // １．データベースに接続する
-$dsn = 'mysql:dbname=oneline_bbs;host=localhost';
+/*$dsn = 'mysql:dbname=oneline_bbs;host=localhost';
 $user = 'root';
 $password = '';
 $dbh = new PDO($dsn, $user, $password);
 $dbh->query('SET NAMES utf8');
+*/
+
+//1:DB接続//リモートのDB
+$dsn = 'mysql:dbname=LAA0792964-onelinebbs;host=mysql103.phy.lolipop.lan';
+$user = 'LAA0792964';
+$password = '10t6020s';
+$dbh = new PDO($dsn, $user, $password);
+$dbh->query('SET NAMES utf8');
+
 
 //post送信が行われたとき
 if(!empty($_POST)){
