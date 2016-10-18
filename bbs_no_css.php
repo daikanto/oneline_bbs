@@ -103,3 +103,52 @@ $dbh = null;
     </ul>
 </body>
 </html>
+
+<?php 
+ If if((!empty($_GET)&&($_GET['action']=='delete'))
+    echo 編集する
+    else 
+    echo つぶやく
+?>
+
+<?php 
+    if((!empty($_GET)&&($_GET['action']=='edit'))
+    {
+        echo $post_each['id'];
+    }
+    else 
+    echo miss;
+?>
+
+<?php
+  if(!empty($_GET)&&($_GET['action']=='edit')){
+
+      foreach ($posts_edit as $post_each_edit) ?>
+      <div class="col-md-4 content-margin-top">
+        <!-- form部分 -->
+        <form action="bbs.php" method="post">
+          <!-- nickname -->
+
+          <div class="form-group">
+            <div class="input-group">
+              <p><input type="text" name="nickname" class="form-control" id="validate-text" placeholder="nickname" required><?php     
+      echo $post_each_edit['nickname'];?></p>
+
+              <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+            </div>
+          </div>
+     
+      <!--echo $post_each_edit['comment'];-->
+    <?php} ?>    
+?>
+<?php
+  if(!empty($_GET)&&($_GET['action']=='edit')){
+
+      foreach ($posts_edit as $post_each_edit) 
+              echo $post_each_edit['nickname'];
+
+          } 
+
+          ?>
+
+
