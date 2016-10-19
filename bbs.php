@@ -8,6 +8,14 @@ $dbh = new PDO($dsn, $user, $password);
 $dbh->query('SET NAMES utf8');
 
 
+
+
+
+
+
+
+
+
 //1:DB接続//リモートのDB
 /*$dsn = 'mysql:dbname=LAA0792964-onelinebbs;host=mysql103.phy.lolipop.lan';
 $user = 'LAA0792964';
